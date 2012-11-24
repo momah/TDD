@@ -15,6 +15,9 @@ describe Racional do
 	@racional.respond_to?(:denominador).should be_true
   end
  
-
+  it "Debe de estar en su forma reducida" do
+	@racional.numerador.should == 1
+    	@racional.denominador.should == 4
+  end
 
 end
