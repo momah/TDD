@@ -51,4 +51,9 @@ describe Racional do
   it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
     	@racional.reciprocal.should == Racional.new(4,1)
   end
+
+  it "Se debe sumar dos fracciones con + y dar el resultado de forma reducida" do
+	racional2 = Racional.new(1,4)  	
+	(@racional +racional2).should == '2/4'
+  end
 end
