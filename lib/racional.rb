@@ -75,4 +75,8 @@ class Racional
   def /(other)
     	return Racional.new(self.num() * other.denom(), self.denom() * other.num()).fraccion
   end
+
+  def %(other)
+    	return Racional.new(self.num() % self.denom(), other.num() % other.denom()).fraccion
+  end
 end
