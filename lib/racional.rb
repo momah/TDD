@@ -55,4 +55,8 @@ class Racional
 	else
 		return Racional.new(self.num(), self.denom())
   end
+
+  def reciprocal
+	return "#{self.denom()} / #{self.num()}"    	
+  end
 end
