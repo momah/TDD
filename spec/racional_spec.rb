@@ -20,4 +20,11 @@ describe Racional do
     	@racional.denominador.should == 4
   end
 
+  it "Se debe invocar al metodo num() para obtener el numerador" do
+	@racional.num().should_not be_nil
+   end
+
+  it "Se debe invocar al metodo denom() para obtener el denominador" do
+	@racional.dem().should_not be_nil
+  end
 end
