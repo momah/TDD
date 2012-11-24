@@ -30,4 +30,8 @@ class Racional
   def fraccion
     	return "#{self.num()} / #{self.denom()}"
   end
+
+  def flotante
+	return self.num().to_f / self.denom().to_f
+  end
 end
