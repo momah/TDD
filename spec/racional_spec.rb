@@ -43,4 +43,8 @@ describe Racional do
   it "Se debe calcular el opuesto de una fraccion con -" do
 	-@racional = Racional.new(-1,4)
   end
+
+  it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+	Racional.new(-1,4).abs.should == @racional
+  end
 end
