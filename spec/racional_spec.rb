@@ -39,4 +39,8 @@ describe Racional do
   it "Se debe comparar si dos fracciones son iguales con ==" do
     	@racional.should == Racional.new(5, 20)
   end
+
+  it "Se debe calcular el opuesto de una fraccion con -" do
+	-@racional = Racional.new(-1,4)
+  end
 end
