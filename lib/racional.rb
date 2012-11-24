@@ -42,4 +42,8 @@ class Racional
 		return false
 	end
   end
+
+  def -@ 
+	return "-#{self.num()} / #{self.denom()}"	
+  end
 end
