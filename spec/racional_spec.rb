@@ -31,4 +31,8 @@ describe Racional do
   it "Se debe mostar por la consola la fraccion de la forma: a/b, donde a es el numerador y b el denominador" do
     	@racional.fraccion.should == '1/4'
   end
+
+  it "Se debe mostar por la consola la fraccion en formato flotante" do
+    	@racional.flotante.should == '0.5'
+  end
 end
