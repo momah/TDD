@@ -79,4 +79,13 @@ class Racional
   def %(other)
     	return Racional.new(self.num() % self.denom(), other.num() % other.denom()).fraccion
   end
+
+  def <=>(other)
+
+	return nil unless racional2.instance_of? Racional
+	slf = self.num().to_f / self.denom().to_f
+	othr = other.num().to_f / other.denom().to_f
+	slf <=> othr
+
+  end
 end
