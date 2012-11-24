@@ -47,4 +47,8 @@ describe Racional do
   it "Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
 	Racional.new(-1,4).abs.should == @racional
   end
+
+  it "Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+    	@racional.reciprocal.should == Racional.new(4,1)
+  end
 end
