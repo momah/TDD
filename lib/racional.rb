@@ -34,4 +34,12 @@ class Racional
   def flotante
 	return self.num().to_f / self.denom().to_f
   end
+
+  def ==(other)
+	if ((other.num() == self.num()) && (other.denom() == self.denom()))
+		return true
+	else
+		return false
+	end
+  end
 end
