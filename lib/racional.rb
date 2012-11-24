@@ -27,4 +27,7 @@ class Racional
     	@denominador
   end
  
+  def fraccion
+    	return "#{self.num()} / #{self.denom()}"
+  end
 end
