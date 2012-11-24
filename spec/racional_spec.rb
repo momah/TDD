@@ -77,4 +77,20 @@ describe Racional do
 	racional2 = Racional.new(2,3)
     	(racional1 %racional2).should == '1/1'
   end
+
+  it "Se debe de poder comprobar si una fracion es menor que otra" do
+    	(@racional < Racional.new(1,2)).should be_true
+  end
+  
+  it "Se debe de poder comprobar si una fracion es mayor que otra" do
+    	(@racional > Racional.new(1,2)).should be_false
+  end
+  
+  it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+    	(@racional <= Racional.new(1,4)).should be_true
+  end
+  
+  it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+	(@racional >= Racional.new(1,4)).should be_true
+  end
 end
