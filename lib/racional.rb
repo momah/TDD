@@ -46,4 +46,13 @@ class Racional
   def -@ 
 	return "-#{self.num()} / #{self.denom()}"	
   end
+  
+  def abs
+	if self.num() < 0
+		return Racional.new(-self.num(), self.denom())
+	elsif self.denom() < 0
+		return Racional.new(self.num(), -self.denom())
+	else
+		return Racional.new(self.num(), self.denom())
+  end
 end
