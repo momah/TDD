@@ -35,4 +35,8 @@ describe Racional do
   it "Se debe mostar por la consola la fraccion en formato flotante" do
     	@racional.flotante.should == '0.5'
   end
+
+  it "Se debe comparar si dos fracciones son iguales con ==" do
+    	@racional.should == Racional.new(5, 20)
+  end
 end
