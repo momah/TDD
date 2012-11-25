@@ -3,7 +3,7 @@ class Racional
   include Comparable
   include Enumerable
   
-  def initialize(num, den)
+  def initialize(numerador, denominador)
     max = mcd(numerador, denominador)
     @numerador, @denominador = numerador/max, denominador/max
   end
