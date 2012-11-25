@@ -1,12 +1,12 @@
 Práctica de Laboratorio #7: Integración Continua
+=================
 
 Considere el desarrollo de una clase Ruby para representar números racionales. Empiece desde cero. La clave de la metodología TDD está en diseñar pruebas que dirijan el desarrollo.
-
+ 
 1) Cree una clase para representar números racional usando Desarrollo Dirigido por el Comportamiento (Behavior Driven Development - BDD) como caso particular del Desarrollo dirigido por pruebas (Test Driven Development - TDD) usando como herramienta Rspec. 
-
+ 
 Puede tomar como ejemplo la siguiente salida:
-
-Racional
+ Racional
   Debe existir un numerador
   Debe existir un denominador
   Debe de estar en su forma reducida
@@ -30,16 +30,15 @@ Racional
 
 Finished in 0.00475 seconds
 20 examples, 0 failures
-
+ 
 La clase se ha de compilar con la herramienta Travis de integración continua. Con ella se comprueba la portabilidad de los desarrollos entre distintas plataformas y versiones de Ruby.
-
+ 
 Para ello realizar los siguientes pasos:
-
+ 
 1. Darse de alta en https://travis-ci.org/ y permitir que se acceda desde github.
-
+ 
 2. Crear un fichero .travis.yml que contenga el listado de plataformas:
-
-language: ruby
+ language: ruby
 rvm:
   - 1.9.3
   - jruby-18mode # JRuby in 1.8 mode
@@ -47,22 +46,19 @@ rvm:
   - rbx-18mode
   - rbx-19mode
   - 1.8.7
-
+ 
 3. Crear un fichero Rakefile que contenga:
-
-$:.unshift File.dirname(__FILE__) + 'lib'
+ $:.unshift File.dirname(__FILE__) + 'lib'
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new
 task :default => :spec
-
+ 
 4. Crear un fichero Gemfile que contenga:
-
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'rspec'
 
-
-
-4. Indique la URL del repositorio github o bitbucket que ha desarrollado.
+ 
+4. Indique la URL del repositorio github o bitbucket que ha desarrollado
